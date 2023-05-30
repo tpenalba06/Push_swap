@@ -6,7 +6,7 @@
 /*   By: tpenalba <tpenalba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 17:07:10 by tpenalba          #+#    #+#             */
-/*   Updated: 2023/05/30 16:15:55 by tpenalba         ###   ########.fr       */
+/*   Updated: 2023/05/30 17:37:04 by tpenalba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@ int	ft_checkargs(int argc, char **argv, t_data *data)
 	int	c;
 	int	i;
 
+	if (argc <= 1)
+		exit (0);
 	if (argc > 2)
 		data->output = ft_alloc_output(argv, data, argc);
 	data->nbr = 0;
 	c = 1;
 	i = 0;
-	if (argc <= 1)
-		return (0);
 	if (argc == 2)
 	{
 		c = 0;
