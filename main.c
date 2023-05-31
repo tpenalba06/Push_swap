@@ -6,7 +6,7 @@
 /*   By: tpenalba <tpenalba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 15:56:52 by tpenalba          #+#    #+#             */
-/*   Updated: 2023/05/30 16:36:47 by tpenalba         ###   ########.fr       */
+/*   Updated: 2023/05/30 19:07:55 by tpenalba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,16 @@ int	main(int argc, char **argv)
 	pile_b = NULL;
 	ft_checkargs(argc, argv, &data);
 	ft_indexation(&data);
-	ft_fill(&data, pile_a, pile_b);
-	system("leaks a.out");
-	exit (0);
+	ft_fill(&data, &pile_a);
+	print_list(pile_a);
+	print_list(pile_b);
+	push_pb(&pile_a, &pile_b);
+	push_pb(&pile_a, &pile_b);
+	swap_b(&pile_b);
+	print_list(pile_a);
+	print_list(pile_b);
+	// system("leaks a.out");
+	// exit (0);
 	ft_free(&data);
 	return (0);
 }

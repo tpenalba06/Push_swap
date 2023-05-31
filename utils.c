@@ -6,7 +6,7 @@
 /*   By: tpenalba <tpenalba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 12:57:33 by tpenalba          #+#    #+#             */
-/*   Updated: 2023/05/30 16:23:57 by tpenalba         ###   ########.fr       */
+/*   Updated: 2023/05/30 19:16:08 by tpenalba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,5 +116,3 @@ int	ft_atoi(const char *str)
 		error404 ();
 	return (result);
 }
-
-

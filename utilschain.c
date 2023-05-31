@@ -6,7 +6,7 @@
 /*   By: tpenalba <tpenalba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 20:38:50 by tpenalba          #+#    #+#             */
-/*   Updated: 2023/05/30 16:08:41 by tpenalba         ###   ########.fr       */
+/*   Updated: 2023/05/30 18:47:02 by tpenalba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,22 +20,22 @@
 // - coder les mouvements necessaires a radix : push a, push b, rotate a, rotate b
 // - exceptions a gerer pour plus tard : les 3 et les 5 (radix ne fonctionne pas)
 
-int	ft_fill(t_data *data, t_pile *pile_a, t_pile *pile_b)
+int	ft_fill(t_data *data, t_pile **pile_a)
 {
 	int	i;
 
 	i = 0;
-	printf("%d\n", data->len);
+	// printf("%d\n", data->len);
 	while (i < data->len)
 	{
-		printf("%d\n", data->index[i]);
-		add_data_to_list(&pile_a, data->index[i]);
+		//printf("%d\n", data->index[i]);
+		add_data_to_list(pile_a, data->index[i]);
 		i++;
 	}
-	printf("Pile A:\n");
-	print_list(pile_a);
-	printf("Pile B:\n");
-	print_list(pile_b);
+	// printf("Pile A:\n");
+	// print_list(pile_a);
+	// printf("Pile B:\n");
+	// print_list(pile_b);
 	return (0);
 }
 
@@ -47,7 +47,7 @@ void	add_data_to_list(t_pile **list, int value)
 	new_element = malloc(sizeof(t_pile));
 	if (!new_element)
 		return ;
-	new_element->data = value;
+	new_element->value = value;
 	new_element->next = NULL;
 	if (*list == NULL)
 	{
@@ -67,7 +67,7 @@ void	print_list(t_pile *pile_a)
 	copy = pile_a;
 	while (copy)
 	{
-		printf(" %ld ->", copy->data);
+		printf(" %ld ->", copy->value);
 		copy = copy->next;
 	}
 	printf ("NULL\n");

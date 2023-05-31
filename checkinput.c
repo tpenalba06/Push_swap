@@ -6,7 +6,7 @@
 /*   By: tpenalba <tpenalba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 17:07:10 by tpenalba          #+#    #+#             */
-/*   Updated: 2023/05/30 17:37:04 by tpenalba         ###   ########.fr       */
+/*   Updated: 2023/05/30 18:40:39 by tpenalba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ int	convert(int argc, char **argv, t_data *data)
 		data->tab[len] = ft_atoi(argv[c]);
 		if ((data->tab[len] > 2147483647) || (data->tab[len] < -2147483648))
 			error404();
-		printf("[%d]\n", data->tab[len]);
+		// printf("[%d]\n", data->tab[len]);
 		//free(argv[c]);
 		//arg_numeric(data->tab[i]);
 		c++;
@@ -99,8 +99,8 @@ void	onearg(int argc, char **argv, t_data *data)
 	{
 		data->output = ft_split(argv[1], ' ');
 		c = 0;
-		while (c < argc - 1)
-			printf("%s\n", data->output[c++]);
+		// while (c < argc - 1)
+		// 	printf("%s\n", data->output[c++]);
 	}
 	else
 		error404();

@@ -6,7 +6,7 @@
 /*   By: tpenalba <tpenalba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 18:47:44 by tpenalba          #+#    #+#             */
-/*   Updated: 2023/05/30 16:18:30 by tpenalba         ###   ########.fr       */
+/*   Updated: 2023/05/30 18:51:59 by tpenalba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,16 +34,16 @@ typedef struct data
 
 typedef struct s_pile
 {
-	long int			data;
+	long int			value;
 	struct s_pile		*next;
 }	t_pile;
 
 //utils
-static size_t		count_words(char const *str, char c);
-static char			*ft_copystring(char const *s, char c, int i);
+// static size_t		count_words(char const *str, char c);
+// static char			*ft_copystring(char const *s, char c, int i);
 char				**ft_split(char const *s, char c);
 int					ft_atoi(const char *str);
-static	int			ft_is_numeric(int c);
+// static	int			ft_is_numeric(int c);
 size_t				ft_strlen(const char *str);
 //int					get_len(int *tab);
 
@@ -58,12 +58,14 @@ void				ft_indexation(t_data *data);
 char				**ft_alloc_output(char **argv, t_data *data, int argc);
 
 //mouvements en t list 
-void				swap_a(t_data **lst);
+void				swap(t_pile **pile);
 void				add_data_to_list(t_pile **list_data, int nb);
-int					ft_fill(t_data *data, t_pile *pile_a, t_pile *pile_b);
+int					ft_fill(t_data *data, t_pile **pile_a);
 void				print_list(t_pile *pile_a);
-void				push_pb(t_pile **pile_b);
-
+void				push_pa(t_pile **pile_b, t_pile **pile_a);
+void				push_pb(t_pile **pile_a, t_pile **pile_b);
+void				swap_a(t_pile **pile_a);
+void				swap_b(t_pile **pile_b);
 //free
 void				ft_free(t_data *data);
 
