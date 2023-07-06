@@ -6,7 +6,7 @@
 /*   By: tpenalba <tpenalba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 19:12:21 by tpenalba          #+#    #+#             */
-/*   Updated: 2023/05/30 19:18:56 by tpenalba         ###   ########.fr       */
+/*   Updated: 2023/05/31 17:51:11 by tpenalba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,39 @@
 
 #include "push_swap.h"
 
-void rotate(t_pile **pile_a, t_pile **pile_b)
+void	rotate(t_pile **pile)
 {
-    tmp pointe vers le pile_a->next
-     pile_a->last = 
-    
+	t_pile	*first;
+	t_pile	*tmp;
+
+	first = *pile;
+	tmp = *pile;
+	if (*pile == NULL)
+		exit(0);
+	while (tmp->next)
+		tmp = tmp->next;
+	tmp->next = first;
+	*pile = (*pile)->next;
+	first->next = NULL;
 }
+
+void	rotate_a(t_pile **pile_a)
+{
+	rotate(pile_a);
+	write(1, "ra\n", 3);
+}
+
+void	rotate_b(t_pile **pile_b)
+{
+	rotate(pile_b);
+	write(1, "rb\n", 3);
+}
+
+void	rotate_both(t_pile **pile_a, t_pile **pile_b)
+{
+	rotate(pile_a);
+	rotate(pile_b);
+	write(1, "rr\n", 3);
+}
+
+

@@ -6,7 +6,7 @@
 /*   By: tpenalba <tpenalba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 18:47:44 by tpenalba          #+#    #+#             */
-/*   Updated: 2023/05/30 18:51:59 by tpenalba         ###   ########.fr       */
+/*   Updated: 2023/06/16 17:16:55 by tpenalba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,16 +57,33 @@ int					convert(int argc, char **argv, t_data *data);
 void				ft_indexation(t_data *data);
 char				**ft_alloc_output(char **argv, t_data *data, int argc);
 
-//mouvements en t list 
-void				swap(t_pile **pile);
+//pile utils
 void				add_data_to_list(t_pile **list_data, int nb);
 int					ft_fill(t_data *data, t_pile **pile_a);
 void				print_list(t_pile *pile_a);
-void				push_pa(t_pile **pile_b, t_pile **pile_a);
-void				push_pb(t_pile **pile_a, t_pile **pile_b);
+
+//swap
+void				swap(t_pile **pile);
 void				swap_a(t_pile **pile_a);
 void				swap_b(t_pile **pile_b);
+
+//push
+void				push(t_pile **src, t_pile **dst);
+void				push_pa(t_pile **pile_b, t_pile **pile_a);
+void				push_pb(t_pile **pile_a, t_pile **pile_b);
+
+//rotate
+void				rotate(t_pile **pile);
+void				rotate_a(t_pile **pile_a);
+void				rotate_b(t_pile **pile_b);
+void				rotate_both(t_pile **pile_a, t_pile **pile_b);
+
+void				reverse_rotate(t_pile **pile);
+void				reverse_rotate_a(t_pile **pile_a);
+void				reverse_rotate_b(t_pile **pile_b);
+void				reverse_rotate_both(t_pile **pile_a, t_pile **pile_b);
+
 //free
-void				ft_free(t_data *data);
+//void				ft_free(t_data *data);
 
 #endif

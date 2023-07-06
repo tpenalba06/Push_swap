@@ -6,11 +6,12 @@
 #    By: tpenalba <tpenalba@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/02 18:43:38 by tpenalba          #+#    #+#              #
-#    Updated: 2023/05/30 18:16:39 by tpenalba         ###   ########.fr        #
+#    Updated: 2023/05/31 17:56:10 by tpenalba         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SOURCES = utils.c utilschain.c checkinput.c main.c push.c swap.c utils2.c
+SOURCES = utils.c utilschain.c checkinput.c main.c push.c swap.c utils2.c reverse_rotate.c 
+rotate.c
 
 OBJS            = $(SOURCES:.c=.o)
 NAME			= push_swap
