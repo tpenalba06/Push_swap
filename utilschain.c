@@ -6,36 +6,22 @@
 /*   By: tpenalba <tpenalba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 20:38:50 by tpenalba          #+#    #+#             */
-/*   Updated: 2023/05/30 18:47:02 by tpenalba         ###   ########.fr       */
+/*   Updated: 2023/07/13 18:11:03 by tpenalba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-// algo de radix : on trie par les unites puis par les dizaines puis par les centaines etc ...
-// on est obliges de convertir les entiers en binaires car il n y a que 2 piles 
-//et qu on trie d abord par 9, puis par 8, puis par 7, etc ...
-// a faire :
-// - remplir une liste chainee depuis mon tab d entier
-// - coder les mouvements necessaires a radix : push a, push b, rotate a, rotate b
-// - exceptions a gerer pour plus tard : les 3 et les 5 (radix ne fonctionne pas)
 
 int	ft_fill(t_data *data, t_pile **pile_a)
 {
 	int	i;
 
 	i = 0;
-	// printf("%d\n", data->len);
 	while (i < data->len)
 	{
-		//printf("%d\n", data->index[i]);
 		add_data_to_list(pile_a, data->index[i]);
 		i++;
 	}
-	// printf("Pile A:\n");
-	// print_list(pile_a);
-	// printf("Pile B:\n");
-	// print_list(pile_b);
 	return (0);
 }
 

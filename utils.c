@@ -6,7 +6,7 @@
 /*   By: tpenalba <tpenalba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 12:57:33 by tpenalba          #+#    #+#             */
-/*   Updated: 2023/05/30 19:16:08 by tpenalba         ###   ########.fr       */
+/*   Updated: 2023/07/12 18:00:15 by tpenalba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,8 +100,8 @@ int	ft_atoi(const char *str)
 	while (ft_is_sign(str[i]) == 1)
 	{
 		if (str[i] == '-')
-	minus++;
-	i++;
+			minus++;
+		i++;
 	}
 	while (str[i])
 	{
@@ -111,7 +111,7 @@ int	ft_atoi(const char *str)
 		i++;
 	}
 	if (minus % 2)
-	result = result * -1;
+		result = result * -1;
 	if ((result > 2147483647) || (result < -2147483648))
 		error404 ();
 	return (result);

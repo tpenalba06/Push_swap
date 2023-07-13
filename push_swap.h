@@ -6,7 +6,7 @@
 /*   By: tpenalba <tpenalba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 18:47:44 by tpenalba          #+#    #+#             */
-/*   Updated: 2023/06/16 17:16:55 by tpenalba         ###   ########.fr       */
+/*   Updated: 2023/07/13 17:33:10 by tpenalba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,11 @@ void				reverse_rotate_a(t_pile **pile_a);
 void				reverse_rotate_b(t_pile **pile_b);
 void				reverse_rotate_both(t_pile **pile_a, t_pile **pile_b);
 
+//algo
+int					is_sort(t_pile **data);
+void				radix(t_pile **pile_a, t_pile **pile_b, long int size);
+void				sort_three(t_pile **pile_a);
+void				sort_five(t_pile **pile_a, t_pile **pile_b);
 //free
 //void				ft_free(t_data *data);
 

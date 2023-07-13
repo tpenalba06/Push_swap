@@ -6,7 +6,7 @@
 /*   By: tpenalba <tpenalba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 17:54:00 by tpenalba          #+#    #+#             */
-/*   Updated: 2023/05/31 17:54:40 by tpenalba         ###   ########.fr       */
+/*   Updated: 2023/07/13 17:47:02 by tpenalba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,18 +36,18 @@ void	reverse_rotate(t_pile **pile)
 void	reverse_rotate_a(t_pile **pile_a)
 {
 	reverse_rotate(pile_a);
-	write(1, "rra\n", 3);
+	write(1, "rra\n", 4);
 }
 
 void	reverse_rotate_b(t_pile **pile_b)
 {
 	reverse_rotate(pile_b);
-	write(1, "rrb\n", 3);
+	write(1, "rrb\n", 4);
 }
 
 void	reverse_rotate_both(t_pile **pile_a, t_pile **pile_b)
 {
 	reverse_rotate(pile_a);
 	reverse_rotate(pile_b);
-	write(1, "rrr\n", 3);
+	write(1, "rrr\n", 4);
 }

@@ -6,7 +6,7 @@
 /*   By: tpenalba <tpenalba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 19:12:21 by tpenalba          #+#    #+#             */
-/*   Updated: 2023/05/31 17:51:11 by tpenalba         ###   ########.fr       */
+/*   Updated: 2023/07/12 18:01:06 by tpenalba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,5 +54,3 @@ void	rotate_both(t_pile **pile_a, t_pile **pile_b)
 	rotate(pile_b);
 	write(1, "rr\n", 3);
 }
-
-

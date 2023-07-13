@@ -6,7 +6,7 @@
 /*   By: tpenalba <tpenalba@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 17:07:10 by tpenalba          #+#    #+#             */
-/*   Updated: 2023/05/30 18:40:39 by tpenalba         ###   ########.fr       */
+/*   Updated: 2023/07/13 17:35:03 by tpenalba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,6 @@ int	ft_checkargs(int argc, char **argv, t_data *data)
 			data->nbr++;
 		argc = data->nbr;
 	}
-	printf("argc -->%d\n", argc);
-	printf("c -->%d\n", c);
 	data->len = convert(argc, data->output, data);
 	ft_checkoccurence(data->tab, data);
 	return (0);
@@ -54,15 +52,11 @@ int	convert(int argc, char **argv, t_data *data)
 		data->tab[len] = ft_atoi(argv[c]);
 		if ((data->tab[len] > 2147483647) || (data->tab[len] < -2147483648))
 			error404();
-		// printf("[%d]\n", data->tab[len]);
-		//free(argv[c]);
-		//arg_numeric(data->tab[i]);
 		c++;
 		len++;
 	}
 	return (len);
 }
-//get la len du tab en mettant l index dans une struct plutot que d utiliser size
 
 void	ft_checkoccurence(int *tab, t_data *data)
 {
@@ -78,7 +72,6 @@ void	ft_checkoccurence(int *tab, t_data *data)
 		j = i + 1;
 		while (j < data->len)
 		{
-		//get la len du tab en mettant l index dans une struct plutot que d utiliser size
 			if (tab[i] == tab[j])
 				error404();
 			j++;
@@ -99,8 +92,6 @@ void	onearg(int argc, char **argv, t_data *data)
 	{
 		data->output = ft_split(argv[1], ' ');
 		c = 0;
-		// while (c < argc - 1)
-		// 	printf("%s\n", data->output[c++]);
 	}
 	else
 		error404();
